@@ -51,7 +51,7 @@
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
-       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+       href="/">&nbsp;<strong>HyperAndy</strong>&nbsp;</a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -141,12 +141,12 @@
 </nav>
 
     <div class="banner intro-2" id="background" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
+         style="background: url('/img/default.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="An elegant Material-Design theme for Hexo">
+            <span class="h2" id="subtitle" title="宠辱不惊，闲看庭前花开花落。去留无意，漫随天外云卷云舒。">
               
             </span>
 
@@ -178,10 +178,16 @@
   <div class="row mx-auto index-card">
     
     
-    <article class="col-12 col-md-12 mx-auto index-info">
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2020/12/18/nms/" target="_self">
+          <img src="/img/bg/nms.png" srcset="/img/loading.gif" alt="手写NMS&amp;soft-NMS">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/12/18/nms/">nms</a>
+        <a href="/2020/12/18/nms/">手写NMS&amp;soft-NMS</a>
       </h1>
 
       <p class="index-excerpt">
@@ -192,6 +198,7 @@
           
           手写NMS &amp; soft-NMS1. NMS（非极大抑制）简介：非极大抑制算法应用相当广泛，其主要目的是消除多余的框，找到最佳的物体检测位置。
 其实现的思想主要是将各个框的置信度进行排序，然后选择其中置信度最高的框A，将其作为标准选择其他框，同时设置一个阈值，当其他框B与A的重合程度超过阈值就将B舍弃掉，然后在剩余的框中选择置信度最大的框，重复上述操作。
+实现：参考faster rcnn源
         </a>
       </p>
 
@@ -220,7 +227,13 @@
   <div class="row mx-auto index-card">
     
     
-    <article class="col-12 col-md-12 mx-auto index-info">
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2020/11/27/ML-DP%E7%9B%B8%E5%85%B3%E5%85%AC%E5%BC%8F/" target="_self">
+          <img src="/img/bg/gongshi.jpg" srcset="/img/loading.gif" alt="ML/DP相关公式">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
         <a href="/2020/11/27/ML-DP%E7%9B%B8%E5%85%B3%E5%85%AC%E5%BC%8F/">ML/DP相关公式</a>
@@ -258,10 +271,16 @@ MSE=\sum_{i=1} ^n (y_i - y_i ^p)^2
   <div class="row mx-auto index-card">
     
     
-    <article class="col-12 col-md-12 mx-auto index-info">
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2020/11/08/diary/" target="_self">
+          <img src="/img/bg/leetcode.jpg" srcset="/img/loading.gif" alt="Leetcode">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/11/08/diary/">leetcode</a>
+        <a href="/2020/11/08/diary/">Leetcode</a>
       </h1>
 
       <p class="index-excerpt">
@@ -274,6 +293,8 @@ MSE=\sum_{i=1} ^n (y_i - y_i ^p)^2
 
 递归：root.val + func(root.left) + func(root.right)
 迭代: [root] -&gt; stack.pop -&gt; root.right -&gt; root.left
+
+12345678910111213141516171819202122232425262728293031323334353
         </a>
       </p>
 
@@ -345,9 +366,33 @@ MSE=\sum_{i=1} ^n (y_i - y_i ^p)^2
 
   <footer class="text-center mt-5 py-3">
   <div class="footer-content">
-     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+     <a><span>Life is fantastic</span></a> <i class="iconfont icon-love"></i> <a><span>HyperAndy</span></a> 
   </div>
   
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
 
   
 
@@ -399,6 +444,8 @@ MSE=\sum_{i=1} ^n (y_i - y_i ^p)^2
   <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
 
 
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 

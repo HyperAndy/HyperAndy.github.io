@@ -67,7 +67,7 @@
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
-       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+       href="/">&nbsp;<strong>HyperAndy</strong>&nbsp;</a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -157,7 +157,7 @@
 </nav>
 
     <div class="banner intro-2" id="background" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
+         style="background: url('/img/default.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -201,6 +201,14 @@
 
   
   
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
 </div>
 
             
@@ -234,7 +242,6 @@ MSE=\sum_{i=1} ^n (y_i - y_i ^p)^2</script><script type="math/tex; mode=display"
 <li>优点：计算简单，逻辑清晰，衡量误差准确；梯度随着误差的增大或减小，收敛效果好；</li>
 <li>缺点：<strong>对于异常值敏感</strong>，会对其赋予较大的权重，如果异常值不属于考虑范围，则会造成偏差；</li>
 </ul>
-<a id="more"></a>
 <h2 id="2、平均绝对值误差-又称MAE，L1损失"><a href="#2、平均绝对值误差-又称MAE，L1损失" class="headerlink" title="2、平均绝对值误差(又称MAE，L1损失)"></a>2、平均绝对值误差(又称MAE，L1损失)</h2><script type="math/tex; mode=display">
 MAE=\sum_{i=1} ^n |y_i - y_i ^p|</script><script type="math/tex; mode=display">
 \frac{\partial MAE}{\partial y_i}=
@@ -413,7 +420,7 @@ y(n) = x(n)*h(n) = \sum ^{\infty}_{-\infty}x(i) \, h(n-i)</script><p>统计学�
                     
                       <a href="/2020/12/18/nms/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">nms</span>
+                        <span class="hidden-mobile">手写NMS&soft-NMS</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -422,7 +429,7 @@ y(n) = x(n)*h(n) = \sum ^{\infty}_{-\infty}x(i) \, h(n-i)</script><p>统计学�
                     
                     
                       <a href="/2020/11/08/diary/">
-                        <span class="hidden-mobile">leetcode</span>
+                        <span class="hidden-mobile">Leetcode</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -432,6 +439,32 @@ y(n) = x(n)*h(n) = \sum ^{\infty}_{-\infty}x(i) \, h(n-i)</script><p>统计学�
               
             </div>
 
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'http://www.wzj.plus/2020/11/27/ML-DP%E7%9B%B8%E5%85%B3%E5%85%AC%E5%BC%8F/';
+        this.page.identifier = '/2020/11/27/ML-DP%E7%9B%B8%E5%85%B3%E5%85%AC%E5%BC%8F/';
+      };
+      Fluid.utils.waitElementVisible('disqus_thread', function () {
+        var d = document, s = d.createElement('script');
+        s.src = '//' + '' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', new Date());
+        (d.head || d.body).appendChild(s);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+
+              </article>
             
           </article>
         </div>
@@ -489,9 +522,33 @@ y(n) = x(n)*h(n) = \sum ^{\infty}_{-\infty}x(i) \, h(n-i)</script><p>统计学�
 
   <footer class="text-center mt-5 py-3">
   <div class="footer-content">
-     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+     <a><span>Life is fantastic</span></a> <i class="iconfont icon-love"></i> <a><span>HyperAndy</span></a> 
   </div>
   
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
 
   
 
@@ -550,6 +607,8 @@ y(n) = x(n)*h(n) = \sum ^{\infty}_{-\infty}x(i) \, h(n-i)</script><p>统计学�
 
 
 
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
 
 
 
@@ -582,9 +641,55 @@ y(n) = x(n)*h(n) = \sum ^{\infty}_{-\infty}x(i) \, h(n-i)</script><p>统计学�
 
 
 
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
 
 
 
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
 
 
 
