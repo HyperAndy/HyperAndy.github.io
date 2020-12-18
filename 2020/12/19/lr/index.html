@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      897 字
+      957 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      12
+      13
        分钟
     </span>
   
@@ -244,44 +244,72 @@
 <h2 id="2-相关概念"><a href="#2-相关概念" class="headerlink" title="2. 相关概念"></a>2. 相关概念</h2><p><strong>几率</strong>：指一件事发生与不发生概率的比值。</p>
 <p><strong>对数几率</strong>：</p>
 <script type="math/tex; mode=display">
-logit(p) = log(\frac{p}{1-p})</script><p><strong>逻辑斯谛分布</strong>：其分布函数为</p>
+\begin{equation}
+logit(p) = log(\frac{p}{1-p})
+\end{equation}</script><p><strong>逻辑斯谛分布</strong>：其分布函数为</p>
 <script type="math/tex; mode=display">
-F(X) = P(X \leq x) = \frac {1} {1 + e ^ {-(x - \mu)/\gamma}}</script><p>概率密度函数为</p>
+\begin{equation}
+F(X) = P(X \leq x) = \frac {1} {1 + e ^ {-(x - \mu)/\gamma}}
+\end{equation}</script><p>概率密度函数为</p>
 <script type="math/tex; mode=display">
-f(x) = F^{\prime}(x) = \frac {e^{-(x - \mu)/\gamma}}{\gamma {(1 + e^{-(x - \mu)/\gamma})}^2}</script><p>其中 $\mu$ 为位置参数，$\gamma &gt; 0 $ 为形状参数，其以 $(\mu, \frac{1}{2})$ 为中心对称</p>
+\begin{equation}
+f(x) = F^{\prime}(x) = \frac {e^{-(x - \mu)/\gamma}}{\gamma {(1 + e^{-(x - \mu)/\gamma})}^2}
+\end{equation}</script><p>其中 $\mu$ 为位置参数，$\gamma &gt; 0 $ 为形状参数，其以 $(\mu, \frac{1}{2})$ 为中心对称</p>
 <script type="math/tex; mode=display">
-F(-x + \mu) - \frac{1}{2} = -F(x + \mu) + \frac{1}{2}</script><p>其概率密度函数和分布函数形状为</p>
+\begin{equation}
+F(-x + \mu) - \frac{1}{2} = -F(x + \mu) + \frac{1}{2}
+\end{equation}</script><p>其概率密度函数和分布函数形状为</p>
 <p><img src="/img/bg/logistic.png" srcset="/img/loading.gif" alt=""></p>
 <h2 id="3-数学推导"><a href="#3-数学推导" class="headerlink" title="3. 数学推导"></a>3. 数学推导</h2><ol>
 <li><p>线性方程</p>
 <script type="math/tex; mode=display">
-z = w \cdot x + b</script></li>
+\begin{equation}
+z = w \cdot x + b
+\end{equation}</script></li>
 <li><p>多元线性方程</p>
 <script type="math/tex; mode=display">
-z = w_0 \cdot x_0 + w_1 \cdot x_1 + \cdots + w_n \cdot x_n + b</script><p>写成矩阵形式为</p>
+\begin{equation}
+z = w_0 \cdot x_0 + w_1 \cdot x_1 + \cdots + w_n \cdot x_n + b
+\end{equation}</script><p>写成矩阵形式为</p>
 <script type="math/tex; mode=display">
-z = W^T X</script></li>
+\begin{equation}
+z = W^T X
+\end{equation}</script></li>
 <li><p>判别函数sigmoid</p>
 <script type="math/tex; mode=display">
-\sigma (z) = \frac{1}{1 + e^{-z}}</script></li>
+\begin{equation}
+\sigma (z) = \frac{1}{1 + e^{-z}}
+\end{equation}</script></li>
 <li><p>多元线性方程经过判别函数后</p>
 <script type="math/tex; mode=display">
-\sigma (z) = \frac{1}{1 + e^{-W^T X}}</script></li>
+\begin{equation}
+\sigma (z) = \frac{1}{1 + e^{-W^T X}}
+\end{equation}</script></li>
 <li><p>依据$\sigma(z)$函数的特性，定义其预测为正例的概率，则</p>
 <script type="math/tex; mode=display">
+\begin{equation}
 P(y=1|w,x) = \sigma(z) \\
-P(y=0|w,x) = 1 - \sigma(z)</script></li>
+P(y=0|w,x) = 1 - \sigma(z)
+\end{equation}</script></li>
 <li><p>预测正确表示方式为</p>
 <script type="math/tex; mode=display">
-P(y^{(i)}|w^{(i)},x^{(i)}) = (\sigma (w^{(i)}, x^{(i)}))^{y^{(i)}} \cdot (1 - \sigma (w^{(i)}, x^{(i)}))^{1 - y^{(i)}}</script></li>
+\begin{equation}
+P(y^{(i)}|w^{(i)},x^{(i)}) = (\sigma (w^{(i)}, x^{(i)}))^{y^{(i)}} \cdot (1 - \sigma (w^{(i)}, x^{(i)}))^{1 - y^{(i)}}
+\end{equation}</script></li>
 <li><p>对于所有样本，假设每条样本生成过程独立，在整个样本空间（N个样本）的概率分布（即似然函数）为</p>
 <script type="math/tex; mode=display">
-P(Y|X;W) = \prod_{i=1}^{N} ((\sigma (w^{(i)}, x^{(i)}))^{y^{(i)}} \cdot (1 - \sigma (w^{(i)}, x^{(i)}))^{1 - y^{(i)}})</script></li>
+\begin{equation}
+P(Y|X;W) = \prod_{i=1}^{N} ((\sigma (w^{(i)}, x^{(i)}))^{y^{(i)}} \cdot (1 - \sigma (w^{(i)}, x^{(i)}))^{1 - y^{(i)}})
+\end{equation}</script></li>
 <li><p>通过对数变换，转换成加法形式，便于求解</p>
 <script type="math/tex; mode=display">
-l(w) = \sum_{i=1}^{N} logP(Y|X;W) = \sum_{i=1}^{N} y^{(i)} \cdot \log(\sigma (w^{(i)}, x^{(i)}) + (1 - y^{(i)}) \cdot \log (1 - \sigma (w^{(i)}, x^{(i)}))</script><p>其中常见的参考资料中使用 $\theta$ 代替 $w$ ， 即</p>
+\begin{equation}
+l(w) = \sum_{i=1}^{N} logP(Y|X;W) = \sum_{i=1}^{N} y^{(i)} \cdot \log(\sigma (w^{(i)}, x^{(i)}) + (1 - y^{(i)}) \cdot \log (1 - \sigma (w^{(i)}, x^{(i)}))
+\end{equation}</script><p>其中常见的参考资料中使用 $\theta$ 代替 $w$ ， 即</p>
 <script type="math/tex; mode=display">
-l(\theta) = \sum_{i=1}^{N} y^{(i)} \cdot \log(h_\theta (x^{(i)}) + (1 - y^{(i)}) \cdot \log (1 - h_\theta (x^{(i)}))</script></li>
+\begin{equation}
+l(\theta) = \sum_{i=1}^{N} y^{(i)} \cdot \log(h_\theta (x^{(i)}) + (1 - y^{(i)}) \cdot \log (1 - h_\theta (x^{(i)}))
+\end{equation}</script></li>
 <li><p>使用随机梯度下降法更新参数</p>
 <script type="math/tex; mode=display">
 \begin{alignat}{1}
@@ -291,7 +319,9 @@ l(\theta) = \sum_{i=1}^{N} y^{(i)} \cdot \log(h_\theta (x^{(i)}) + (1 - y^{(i)})
 \end{alignat}</script></li>
 <li><p>通过扫描样本，迭代求得参数</p>
 <script type="math/tex; mode=display">
-\theta_j := \theta_j + \alpha(y^{(i)} - h_\theta(x^{(i)}))x_{j}^{(i)}</script><p>式子中 $\alpha$ 表示学习率</p>
+\begin{equation}
+\theta_j := \theta_j + \alpha(y^{(i)} - h_\theta(x^{(i)}))x_{j}^{(i)}
+\end{equation}</script><p>式子中 $\alpha$ 表示学习率</p>
 </li>
 </ol>
 <h2 id="3-优缺点"><a href="#3-优缺点" class="headerlink" title="3. 优缺点"></a>3. 优缺点</h2><p>优点：</p>
@@ -556,7 +586,8 @@ l(\theta) = \sum_{i=1}^{N} y^{(i)} \cdot \log(h_\theta (x^{(i)}) + (1 - y^{(i)})
     <script>
       MathJax = {
         tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']]
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          tags: 'ams'
         },
         options: {
           renderActions: {
